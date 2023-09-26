@@ -1,0 +1,105 @@
+/*  */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: #f1f5f8;
+}
+
+main {
+    width: 90vw;
+    margin: 5rem auto;
+}
+
+h1 {
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 3rem;
+}
+
+.underline {
+    height: 4px;
+    width: 150px;
+    background-color: #49a6e9;
+    margin: .5rem auto 5rem auto;
+}
+
+.card {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 1rem;
+}
+
+.card img {
+    height: 100px;
+    width: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.card h5 {
+    text-transform: capitalize;
+    color: #617d98;
+    letter-spacing: 1px;
+}
+
+.card a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    background-color: #49a6e9;
+    padding: .3rem .9rem;
+    border-radius: 1rem;
+    font-size: .8rem;
+    letter-spacing: 1px;
+}
+
+.followers {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1250px;
+    margin: 0 auto;
+}
+
+.btn-container {
+    text-align: center;
+    margin: 4rem 0;
+    display: flex;
+    justify-content: center;
+    column-gap: .8rem;
+}
+
+.page-btn {
+    background-color: #8bcbf9;
+    border: transparent;
+    border-radius: .5rem;
+    color: black;
+    padding: .5rem .8rem;
+    cursor: pointer;
+}
+
+.prev-btn,
+.next-btn {
+    text-transform: capitalize;
+    background-color: transparent;
+    border: transparent;
+    font-weight: bolder;
+    letter-spacing: 1px;
+    font-size: .9rem;
+    cursor: pointer;
+}
+
+.active {
+    background-color: #063251;
+    color: white;
+}
