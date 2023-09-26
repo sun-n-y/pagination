@@ -6,12 +6,18 @@ import displayButtons from './utils/displayButtons.js';
 
 const title = document.querySelector('main h1');
 
-const setupUI = () => {};
+let pages = [];
+let index = 0;
+
+const setupUI = () => {
+  displayFollowers(pages[index]);
+};
 
 const init = async () => {
   const followers = await fetchFollowers();
   title.textContent = 'pagination';
-  displayFollowers(followers);
+  pages = paginate(followers);
+  setupUI();
 };
 
 window.addEventListener('load', init);
