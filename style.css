@@ -84,8 +84,11 @@ h1 {
     border: transparent;
     border-radius: .5rem;
     color: black;
+    width: 33px;
     padding: .5rem .8rem;
     cursor: pointer;
+    display: grid;
+    place-content: center;
 }
 
 .prev-btn,

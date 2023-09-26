@@ -5,12 +5,14 @@ import paginate from './utils/paginate.js';
 import displayButtons from './utils/displayButtons.js';
 
 const title = document.querySelector('main h1');
+const btnContainer = document.querySelector('.btn-container');
 
 let pages = [];
 let index = 0;
 
 const setupUI = () => {
   displayFollowers(pages[index]);
+  displayButtons(btnContainer, pages, index);
 };
 
 const init = async () => {
