@@ -1,6 +1,6 @@
 //
-const paginate = (followers) => {
-  const itemsPerPage = 6;
+const paginate = (followers, value) => {
+  const itemsPerPage = value;
   const numberOfPages = Math.ceil(followers.length / itemsPerPage);
   const newArray = Array.from({ length: numberOfPages }, (_, index) => {
     const start = index * itemsPerPage;
