@@ -35,8 +35,8 @@ itemsPerPageContainer.addEventListener('click', function (e) {
       value.classList.remove('active-ipp');
     });
     e.target.classList.add('active-ipp');
-    init();
   }
+  init();
 });
 
 btnContainer.addEventListener('click', function (e) {
