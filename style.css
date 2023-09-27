@@ -32,6 +32,8 @@ h1 {
     display: flex;
     column-gap: 1rem;
     padding-left: .5rem;
+    max-width: 1250px;
+    margin: 0 auto;
     margin-bottom: 2rem;
 }
 
