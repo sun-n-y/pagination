@@ -1,4 +1,5 @@
 //
+
 const container = document.querySelector('.followers');
 
 const displayFollowers = (followers) => {

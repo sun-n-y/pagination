@@ -6,6 +6,7 @@ import displayButtons from './utils/displayButtons.js';
 
 const title = document.querySelector('main h1');
 const btnContainer = document.querySelector('.btn-container');
+const itemsPerPageContainer = document.querySelector('.items-per-page');
 
 let pages = [];
 let index = 0;
@@ -44,3 +45,16 @@ btnContainer.addEventListener('click', function (e) {
   }
   setupUI();
 });
+
+// itemsPerPageContainer.addEventListener('click', function (e) {
+//   if (e.target.classList.contains('items-per-page')) return;
+//   if (e.target.classList.contains('value')) {
+//     valueIPP = parseInt(e.target.textContent);
+//     const values = document.querySelectorAll('.value');
+//     values.forEach((value) => {
+//       value.classList.remove('active-ipp');
+//     });
+//     e.target.classList.add('active-ipp');
+//   }
+//   init();
+// });
