@@ -10,6 +10,7 @@ const itemsPerPageContainer = document.querySelector('.items-per-page');
 
 let pages = [];
 let index = 0;
+let valueIPP = 10;
 
 const setupUI = () => {
   displayFollowers(pages[index]);
@@ -19,7 +20,7 @@ const setupUI = () => {
 const init = async () => {
   const followers = await fetchFollowers();
   title.textContent = 'pagination';
-  pages = paginate(followers);
+  pages = paginate(followers, valueIPP);
   setupUI();
 };
 
@@ -46,15 +47,15 @@ btnContainer.addEventListener('click', function (e) {
   setupUI();
 });
 
-// itemsPerPageContainer.addEventListener('click', function (e) {
-//   if (e.target.classList.contains('items-per-page')) return;
-//   if (e.target.classList.contains('value')) {
-//     valueIPP = parseInt(e.target.textContent);
-//     const values = document.querySelectorAll('.value');
-//     values.forEach((value) => {
-//       value.classList.remove('active-ipp');
-//     });
-//     e.target.classList.add('active-ipp');
-//   }
-//   init();
-// });
+itemsPerPageContainer.addEventListener('click', function (e) {
+  if (e.target.classList.contains('items-per-page')) return;
+  if (e.target.classList.contains('value')) {
+    valueIPP = parseInt(e.target.textContent);
+    const values = document.querySelectorAll('.value');
+    values.forEach((value) => {
+      value.classList.remove('active-ipp');
+    });
+    e.target.classList.add('active-ipp');
+  }
+  init();
+});
