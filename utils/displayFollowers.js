@@ -3,8 +3,9 @@
 const container = document.querySelector('.followers');
 
 const displayFollowers = (followers) => {
-  if (!followers) return;
-  console.log(followers);
+  if (!followers) {
+    window.location.replace('index.html');
+  }
   container.innerHTML = followers
     .map((item) => {
       const { login, avatar_url, html_url } = item;
